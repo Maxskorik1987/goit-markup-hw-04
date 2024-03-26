@@ -123,11 +123,28 @@ ol {
   color: #2e2f42;
   padding: 24px 0;
   display: block;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link:hover,
 .nav-link:focus {
   color: #404bbf;
+}
+
+.current {
+  position: relative;
+  color: #404bbf;
+}
+
+.current::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1;
+  background: #404bbf;
+  border-radius: 2px;
+  height: 4px;
+  width: 100%;
 }
 
 .address {
@@ -150,6 +167,7 @@ ol {
 .address-link:hover,
 .address-link:focus {
   color: #404bbf;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-list-item {
@@ -163,6 +181,16 @@ ol {
 .hero {
   background-color: #2e2f42;
   padding: 188px 0;
+  max-width: 1440px;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people-office\ 1-min-min.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
 }
 
 .hero-title {
@@ -350,9 +378,7 @@ ol {
 .portfolio-item-text {
   display: flex;
   align-items: flex-start;
-  justify-content: center;
   flex-direction: column;
-  gap: 8px;
   border-bottom: 1px solid #e7e9fc;
   border-left: 1px solid #e7e9fc;
   border-right: 1px solid #e7e9fc;
@@ -398,10 +424,9 @@ ol {
 }
 
 .footer-text {
-font-size: 16px;
-line-height: 1.5;
-letter-spacing: 0.02em;
-color: #f4f4fd;
-max-width: 264px;
-}
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  max-width: 264px;
 }
